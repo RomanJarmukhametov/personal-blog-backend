@@ -5,15 +5,16 @@
   "description": "Roman Jarmukhametov's Portfolio Backend",
   "license": "MIT",
   "author": {
-    "name": "Roman Jarmukhametov"
+    "name": "Roman Jarmukhametov",
+    "email": "roman.jarmukhametov@gmail.com"
   },
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
+    "prepare": "husky",
     "start": "strapi start",
-    "strapi": "strapi",
-    "prepare": "husky"
+    "strapi": "strapi"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "4.25.5",
