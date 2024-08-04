@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_layout_side_navigations",
+  "info": {
+    "displayName": "Side Navigation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "menuItem": {
+      "displayName": "Menu Item",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.menu-item"
+    }
+  }
+}
