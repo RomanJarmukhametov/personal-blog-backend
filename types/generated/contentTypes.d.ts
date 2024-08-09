@@ -377,6 +377,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     title: Attribute.String;
     description: Attribute.Text;
     sideNavigation: Attribute.Component<'layout.side-navigation'>;
+    header: Attribute.Component<'layout.header'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
