@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "headingText": {
+      "type": "string"
+    },
+    "highlightedText": {
+      "type": "string"
+    },
+    "subheadingText": {
+      "type": "text"
+    }
+  }
+}
