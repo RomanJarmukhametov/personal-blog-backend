@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_layout_content_sections",
+  "info": {
+    "displayName": "Content Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}
