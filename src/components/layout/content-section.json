@@ -1,10 +1,17 @@
 {
   "collectionName": "components_layout_content_sections",
   "info": {
-    "displayName": "Content Section"
+    "displayName": "Content Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
+    "widgetNewsletter": {
+      "displayName": "Newsletter Widget",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.newsletter-widget"
+    },
     "heading": {
       "type": "string"
     }

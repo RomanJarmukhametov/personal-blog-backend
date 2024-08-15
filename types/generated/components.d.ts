@@ -39,9 +39,25 @@ export interface LayoutContentSection extends Schema.Component {
   collectionName: 'components_layout_content_sections';
   info: {
     displayName: 'Content Section';
+    description: '';
   };
   attributes: {
+    widgetNewsletter: Attribute.Component<'components.newsletter-widget'>;
     heading: Attribute.String;
+  };
+}
+
+export interface ComponentsNewsletterWidget extends Schema.Component {
+  collectionName: 'components_components_newsletter_widgets';
+  info: {
+    displayName: 'Newsletter Widget';
+  };
+  attributes: {
+    image: Attribute.Media<'images', true>;
+    heading: Attribute.String;
+    subheading: Attribute.String;
+    inputPlaceholder: Attribute.String;
+    buttonText: Attribute.String;
   };
 }
 
@@ -76,6 +92,7 @@ declare module '@strapi/types' {
       'layout.hero-section': LayoutHeroSection;
       'layout.header': LayoutHeader;
       'layout.content-section': LayoutContentSection;
+      'components.newsletter-widget': ComponentsNewsletterWidget;
       'components.menu-item': ComponentsMenuItem;
       'components.link': ComponentsLink;
     }
