@@ -43,7 +43,8 @@ export interface LayoutContentSection extends Schema.Component {
   };
   attributes: {
     widgetNewsletter: Attribute.Component<'components.newsletter-widget'>;
-    heading: Attribute.String;
+    postsHeading: Attribute.String;
+    projectsHeading: Attribute.String;
   };
 }
 

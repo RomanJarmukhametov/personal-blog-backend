@@ -12,7 +12,10 @@
       "repeatable": false,
       "component": "components.newsletter-widget"
     },
-    "heading": {
+    "postsHeading": {
+      "type": "string"
+    },
+    "projectsHeading": {
       "type": "string"
     }
   }
