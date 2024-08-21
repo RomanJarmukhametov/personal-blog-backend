@@ -17,6 +17,9 @@
     },
     "projectsHeading": {
       "type": "string"
+    },
+    "noFeaturedProjectsMessage": {
+      "type": "text"
     }
   }
 }

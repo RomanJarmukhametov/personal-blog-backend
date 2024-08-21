@@ -45,6 +45,7 @@ export interface LayoutContentSection extends Schema.Component {
     widgetNewsletter: Attribute.Component<'components.newsletter-widget'>;
     postsHeading: Attribute.String;
     projectsHeading: Attribute.String;
+    noFeaturedProjectsMessage: Attribute.Text;
   };
 }
 

@@ -906,11 +906,11 @@ export interface ApiProjectProject extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    logo: Attribute.Media<'images'>;
+    image: Attribute.Media<'images'>;
     heading: Attribute.String;
     subheading: Attribute.Text;
-    link: Attribute.Component<'components.link'>;
     featured: Attribute.Boolean & Attribute.DefaultTo<false>;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
