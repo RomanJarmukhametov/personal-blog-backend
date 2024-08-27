@@ -49,6 +49,30 @@ export interface LayoutContentSection extends Schema.Component {
   };
 }
 
+export interface LayoutAboutHeader extends Schema.Component {
+  collectionName: 'components_layout_about_headers';
+  info: {
+    displayName: 'About Page Header';
+    description: '';
+  };
+  attributes: {
+    pageHeader: Attribute.Component<'components.page-header'>;
+  };
+}
+
+export interface ComponentsPageHeader extends Schema.Component {
+  collectionName: 'components_components_page_headers';
+  info: {
+    displayName: 'Page Header';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    highlightedText: Attribute.String;
+    image: Attribute.Media<'images'>;
+    content: Attribute.Blocks;
+  };
+}
+
 export interface ComponentsNewsletterWidget extends Schema.Component {
   collectionName: 'components_components_newsletter_widgets';
   info: {
@@ -94,6 +118,8 @@ declare module '@strapi/types' {
       'layout.hero-section': LayoutHeroSection;
       'layout.header': LayoutHeader;
       'layout.content-section': LayoutContentSection;
+      'layout.about-header': LayoutAboutHeader;
+      'components.page-header': ComponentsPageHeader;
       'components.newsletter-widget': ComponentsNewsletterWidget;
       'components.menu-item': ComponentsMenuItem;
       'components.link': ComponentsLink;

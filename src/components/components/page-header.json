@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_components_page_headers",
+  "info": {
+    "displayName": "Page Header"
+  },
+  "options": {},
+  "attributes": {
+    "headingText": {
+      "type": "string"
+    },
+    "highlightedText": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

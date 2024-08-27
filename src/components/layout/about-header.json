@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_about_headers",
+  "info": {
+    "displayName": "About Page Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pageHeader": {
+      "displayName": "Page Header",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.page-header"
+    }
+  }
+}
