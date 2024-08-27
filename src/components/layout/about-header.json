@@ -6,11 +6,21 @@
   },
   "options": {},
   "attributes": {
-    "pageHeader": {
-      "displayName": "Page Header",
-      "type": "component",
-      "repeatable": false,
-      "component": "components.page-header"
+    "headingText": {
+      "type": "string"
+    },
+    "highlightedText": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "blocks"
     }
   }
 }

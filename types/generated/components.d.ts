@@ -1,5 +1,56 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ComponentsPageHeader extends Schema.Component {
+  collectionName: 'components_components_page_headers';
+  info: {
+    displayName: 'Page Header';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    highlightedText: Attribute.String;
+    image: Attribute.Media<'images'>;
+    content: Attribute.Blocks;
+  };
+}
+
+export interface ComponentsNewsletterWidget extends Schema.Component {
+  collectionName: 'components_components_newsletter_widgets';
+  info: {
+    displayName: 'Newsletter Widget';
+  };
+  attributes: {
+    image: Attribute.Media<'images', true>;
+    heading: Attribute.String;
+    subheading: Attribute.String;
+    inputPlaceholder: Attribute.String;
+    buttonText: Attribute.String;
+  };
+}
+
+export interface ComponentsMenuItem extends Schema.Component {
+  collectionName: 'components_components_menu_items';
+  info: {
+    displayName: 'Menu Item';
+  };
+  attributes: {
+    href: Attribute.String;
+    icon: Attribute.String;
+    text: Attribute.String;
+  };
+}
+
+export interface ComponentsLink extends Schema.Component {
+  collectionName: 'components_components_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    name: Attribute.String;
+    href: Attribute.String;
+    isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface LayoutSideNavigation extends Schema.Component {
   collectionName: 'components_layout_side_navigations';
   info: {
@@ -56,16 +107,6 @@ export interface LayoutAboutHeader extends Schema.Component {
     description: '';
   };
   attributes: {
-    pageHeader: Attribute.Component<'components.page-header'>;
-  };
-}
-
-export interface ComponentsPageHeader extends Schema.Component {
-  collectionName: 'components_components_page_headers';
-  info: {
-    displayName: 'Page Header';
-  };
-  attributes: {
     headingText: Attribute.String;
     highlightedText: Attribute.String;
     image: Attribute.Media<'images'>;
@@ -73,56 +114,18 @@ export interface ComponentsPageHeader extends Schema.Component {
   };
 }
 
-export interface ComponentsNewsletterWidget extends Schema.Component {
-  collectionName: 'components_components_newsletter_widgets';
-  info: {
-    displayName: 'Newsletter Widget';
-  };
-  attributes: {
-    image: Attribute.Media<'images', true>;
-    heading: Attribute.String;
-    subheading: Attribute.String;
-    inputPlaceholder: Attribute.String;
-    buttonText: Attribute.String;
-  };
-}
-
-export interface ComponentsMenuItem extends Schema.Component {
-  collectionName: 'components_components_menu_items';
-  info: {
-    displayName: 'Menu Item';
-  };
-  attributes: {
-    href: Attribute.String;
-    icon: Attribute.String;
-    text: Attribute.String;
-  };
-}
-
-export interface ComponentsLink extends Schema.Component {
-  collectionName: 'components_components_links';
-  info: {
-    displayName: 'Link';
-  };
-  attributes: {
-    name: Attribute.String;
-    href: Attribute.String;
-    isExternal: Attribute.Boolean & Attribute.DefaultTo<false>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'components.page-header': ComponentsPageHeader;
+      'components.newsletter-widget': ComponentsNewsletterWidget;
+      'components.menu-item': ComponentsMenuItem;
+      'components.link': ComponentsLink;
       'layout.side-navigation': LayoutSideNavigation;
       'layout.hero-section': LayoutHeroSection;
       'layout.header': LayoutHeader;
       'layout.content-section': LayoutContentSection;
       'layout.about-header': LayoutAboutHeader;
-      'components.page-header': ComponentsPageHeader;
-      'components.newsletter-widget': ComponentsNewsletterWidget;
-      'components.menu-item': ComponentsMenuItem;
-      'components.link': ComponentsLink;
     }
   }
 }
