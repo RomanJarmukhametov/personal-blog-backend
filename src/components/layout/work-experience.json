@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_layout_work_experiences",
+  "info": {
+    "displayName": "Work Experience"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    }
+  }
+}

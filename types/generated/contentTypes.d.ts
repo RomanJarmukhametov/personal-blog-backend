@@ -802,7 +802,9 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    blocks: Attribute.DynamicZone<['layout.about-header']>;
+    blocks: Attribute.DynamicZone<
+      ['layout.about-header', 'layout.work-experience']
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

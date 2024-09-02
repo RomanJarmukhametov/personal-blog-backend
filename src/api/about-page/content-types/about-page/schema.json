@@ -21,7 +21,8 @@
     "blocks": {
       "type": "dynamiczone",
       "components": [
-        "layout.about-header"
+        "layout.about-header",
+        "layout.work-experience"
       ]
     }
   }

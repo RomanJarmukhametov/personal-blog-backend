@@ -51,6 +51,16 @@ export interface ComponentsLink extends Schema.Component {
   };
 }
 
+export interface LayoutWorkExperience extends Schema.Component {
+  collectionName: 'components_layout_work_experiences';
+  info: {
+    displayName: 'Work Experience';
+  };
+  attributes: {
+    heading: Attribute.String;
+  };
+}
+
 export interface LayoutSideNavigation extends Schema.Component {
   collectionName: 'components_layout_side_navigations';
   info: {
@@ -121,6 +131,7 @@ declare module '@strapi/types' {
       'components.newsletter-widget': ComponentsNewsletterWidget;
       'components.menu-item': ComponentsMenuItem;
       'components.link': ComponentsLink;
+      'layout.work-experience': LayoutWorkExperience;
       'layout.side-navigation': LayoutSideNavigation;
       'layout.hero-section': LayoutHeroSection;
       'layout.header': LayoutHeader;
