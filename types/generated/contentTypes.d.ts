@@ -1000,6 +1000,36 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
 }
 
+export interface ApiSidebarSidebar extends Schema.SingleType {
+  collectionName: 'sidebars';
+  info: {
+    singularName: 'sidebar';
+    pluralName: 'sidebars';
+    displayName: 'Sidebar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    widgetNewsletter: Attribute.Component<'components.newsletter-widget'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sidebar.sidebar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sidebar.sidebar',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1024,6 +1054,7 @@ declare module '@strapi/types' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::project.project': ApiProjectProject;
+      'api::sidebar.sidebar': ApiSidebarSidebar;
     }
   }
 }
