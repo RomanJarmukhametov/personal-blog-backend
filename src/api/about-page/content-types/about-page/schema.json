@@ -22,7 +22,8 @@
       "type": "dynamiczone",
       "components": [
         "layout.about-header",
-        "layout.work-experience"
+        "layout.work-experience",
+        "layout.let-s-connect"
       ]
     }
   }

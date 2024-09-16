@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_layout_let_s_connects",
+  "info": {
+    "displayName": "Let's Connect"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}
